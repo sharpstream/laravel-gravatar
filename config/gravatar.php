@@ -15,7 +15,6 @@ return [
     */
 
     'default_preset' => null,
-//  'default_preset' => 'gravatar',
 
     /*
     |--------------------------------------------------------------------------
@@ -77,10 +76,11 @@ return [
             | - null value to fallback to the default Gravatar
             | - a string represanting the URL of your own default image
             | - '404': do not load any image if none is associated with the email hash, instead return an HTTP 404 (File Not Found) response
-            | - 'mm': (mystery-man) a simple, cartoon-style silhouetted outline of a person (does not vary by email hash)
+            | - 'mp': (mystery-person) a simple, cartoon-style silhouetted outline of a person (does not vary by email hash)
             | - 'identicon': a geometric pattern based on an email hash
             | - 'monsterid': a generated 'monster' with different colors, faces, etc
             | - 'wavatar': generated faces with differing features and backgrounds
+            | - 'robohash': a generated robot with different colors, faces, etc
             | - 'retro': awesome generated, 8-bit arcade-style pixelated faces
             | - 'blank': a transparent PNG image
             */
@@ -134,27 +134,30 @@ return [
 
         /*
         |--------------------------------------------------------------------------
-        | Another Preset
+        | Another Presets
         |--------------------------------------------------------------------------
         |
-        | Here is another example of a preset.
+        | Define here your own presets.
         |
         */
 
-        'another_preset' => [
-
-            'size' => 120,
-
-            'default_image' => 'mm',
-
-            'force_default' => false,
-
-            'max_rating' => 'r',
-
+        'small' => [
+            'size' => 40,
+            'default_image' => 'mp',
             'extension' => 'jpg',
+        ],
 
-         ],
+        'medium' => [
+            'size' => 120,
+            'default_image' => 'mp',
+            'extension' => 'jpg',
+        ],
+
+        'large' => [
+            'size' => 360,
+            'default_image' => 'mp',
+            'extension' => 'jpg',
+        ],
 
     ],
-
 ];

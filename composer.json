@@ -1,43 +1,43 @@
 {
-    "name" : "forxer/laravel-gravatar",
-    "description" : "A library providing easy gravatar integration in Laravel.",
-    "keywords" : [
+    "name": "forxer/laravel-gravatar",
+    "description": "A library providing easy gravatar integration in a Laravel project.",
+    "keywords": [
         "gravatar",
         "laravel"
     ],
-    "type" : "library",
-    "license" : "MIT",
-    "authors" : [{
-            "name" : "Vincent Garnier",
-            "email" : "forxer@gmail.org",
-            "homepage" : "http://forx.fr"
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vincent Garnier",
+            "email": "forxer@gmail.org"
         }
     ],
-    "require" : {
-        "php" : ">=5.6.4",
-        "illuminate/support" : "5.4.*|5.5.*|5.6.*|5.7.*|5.8.*|^6.0",
-        "forxer/gravatar" : "~2.0"
+    "support": {
+        "issues": "https://github.com/forxer/laravel-gravatar/issues",
+        "email": "forxer@gmail.com"
     },
-    "autoload" : {
-        "psr-4" : {
-            "forxer\\LaravelGravatar\\" : "src"
+    "require": {
+        "php": "^8.0.0",
+        "illuminate/support": "^8.0 || ^9.0 || ^10.0 || ^11.0",
+        "forxer/gravatar": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelGravatar\\": "src"
         },
-        "files" : [
+        "files": [
             "src/helpers.php"
         ]
     },
-    "minimum-stability" : "dev",
-    "support" : {
-        "issues" : "https://github.com/forxer/laravel-gravatar/issues",
-        "email" : "forxer@gmail.com"
-    },
+    "minimum-stability": "dev",
     "extra": {
         "laravel": {
             "providers": [
-                "forxer\\LaravelGravatar\\ServiceProvider"
+                "LaravelGravatar\\ServiceProvider"
             ],
-            "aliases":{
-                "Gravatar": "forxer\\LaravelGravatar\\Facade"
+            "aliases": {
+                "Gravatar": "LaravelGravatar\\Facades\\Gravatar"
             }
         }
     }
